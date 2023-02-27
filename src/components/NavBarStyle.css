@@ -1,0 +1,150 @@
+.NavbarItems {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 0 30px;
+  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.25);
+  width: 95%;
+  margin: 0 auto;
+  height: 80px;
+  border-radius: 13px;
+background-color: #fff;
+
+
+  position: fixed;
+  top:20px;
+  left: 50%;
+  transform: translate(-50%);
+  z-index: 1000;
+
+}
+
+.nav-menu {
+  display: grid;
+  grid-template-columns: repeat(5, auto);
+  gap: 10px;
+  margin-left: 390px;
+  /* border: 1px solid black; */
+  list-style: none;
+}
+
+.navbar-logo {
+  color: #222;
+  font-size: 30px;
+  cursor: pointer;
+}
+
+.nav-links {
+  text-decoration: none;
+  color: #222;
+  font-size: 15px;
+  white-space: nowrap;
+  font-weight: 600;
+  padding: 21px 30px;
+}
+.nav-links > a {
+  text-decoration: none;
+  padding: 10px;
+  color: black;
+}
+.nav-links-mobile > a {
+  text-decoration: none;
+  display: none;   
+}
+.nav-links > a:hover {
+  background-color: #01959a;
+  color: #fff;
+  border-radius: 5px;
+  transition: all 0.2 ease-in-out;
+}
+button {
+  padding: 8px;
+  margin-bottom: 13px;
+  white-space: nowrap;
+  font-weight: 600;
+  border-radius: 10px;
+  border: none;
+  cursor: pointer;
+}
+
+button:hover {
+  background-color: black;
+  color: #fff;
+}
+
+.menu-icon{
+    display: none;
+}
+
+/* media query */
+@media screen and (max-width: 1200px) {
+    .NavbarItems {
+      
+        z-index: 99;
+    }
+    .menu-icon{
+        display: block;
+        font-size: 20px ;
+        color: #222;
+        cursor: pointer;
+    }
+  .nav-menu {
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    background-color: white;
+    width: 100%;
+    height: auto;
+    position: absolute;
+    top: 0;
+    left: -100%;
+    opacity: 0;
+    transition: 0.3s ease-in-out;
+    align-items: stretch;
+    padding: 80px 0 30px 0;
+    border-radius: 13px;
+    margin: 0;
+  }
+  
+  .nav-menu.active1 {
+opacity: 1;
+left: 0;
+z-index: -1;
+transition: 0.3s ease-in-out;
+
+  }
+  
+  .nav-links {
+    display: block;
+    width: 100%;
+    font-size: 18px;
+    padding: 32px 0;
+  }
+  .nav-links:hover {
+    background-color: #01959a;
+    transition: none;
+  }
+  button {
+    display: none;
+  }
+  .nav-links-mobile > a {
+    text-align: center;
+    padding: 24px;
+    display: block;
+    margin: auto;
+    border-radius: 4px;
+    width: 80%;
+    background-color: #01959a;
+    text-decoration: none;
+    color: #fff;
+    font-size: 18px;
+    font-weight: 700;
+    letter-spacing: 2px;
+  }
+}
+
+@media screen and (max-width: 768px) {
+body{
+  width: 500px;
+}
+}
