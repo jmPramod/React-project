@@ -9,7 +9,7 @@ const NavBar = () => {
   return (    
     <>
       <nav className="NavbarItems">
-        <h1 className="navbar-logo">logo</h1>
+        <h1 className="navbar-logo"><img style={{width:"60px", height:"60px", borderRadius:"100%" , fontWeight:"900"}} src="/img/logo1.png" alt="" /></h1>
 
         <div className="menu-icon" >
           <i className={clicked?"fas fa-times" : "fas fa-bars"} onClick={()=>setClicked(!clicked)}> </i>
